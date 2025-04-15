@@ -2,8 +2,6 @@ server:
   port: 8010
   #================ Configuracion spring =================#
 spring:
-  problem:
-    enabled: false
   application:
     name: prueba-java-smartjob
   main:

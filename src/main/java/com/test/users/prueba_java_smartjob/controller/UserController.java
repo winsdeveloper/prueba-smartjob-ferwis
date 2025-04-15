@@ -22,7 +22,7 @@ public class UserController {
 
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
-  public Mono<ApiResponse<UserResponse>> registerUser(@Valid @RequestBody UserRequest request) {
+  public Mono<ApiResponse<?>> registerUser(@Valid @RequestBody UserRequest request) {
     log.info("registerUser started, request: {}", request);
     return iUserService.createUser(request);
   }

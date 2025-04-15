@@ -44,5 +44,4 @@ public class User {
   @Builder.Default
   private Boolean isActive = true;
 
-  private List<Phone> phones;
 }

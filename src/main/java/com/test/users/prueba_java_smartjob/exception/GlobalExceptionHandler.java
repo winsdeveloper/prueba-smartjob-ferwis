@@ -24,7 +24,7 @@ public class GlobalExceptionHandler {
     return Mono.just(
         ApiResponse.error(
             ex.getFieldErrors().stream()
-                .map(fieldError -> "Field "+fieldError.getField() + "missing or empty : " +
+                .map(fieldError -> "Field '"+fieldError.getField() + "' missing or empty : " +
                     fieldError.getDefaultMessage())
                 .collect(Collectors.joining(" | ")))
         );
