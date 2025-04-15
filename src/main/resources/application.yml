@@ -1,0 +1,25 @@
+server:
+  port: 8010
+  #================ Configuracion spring =================#
+spring:
+  problem:
+    enabled: false
+  application:
+    name: prueba-java-smartjob
+  main:
+    allow-bean-definition-overriding: true
+  r2dbc:
+    url: r2dbc:h2:mem:///testdb
+    username: sa
+    password:
+    sql:
+      init.mode: always
+
+jwt:
+  secret: secretKey
+  expiration: 86400000 # 24h
+
+logging:
+  level:
+    root: INFO
+    com.integration.specialist: DEBUG
